@@ -1,0 +1,36 @@
+name:                lens-over-tea
+version:             0.1.0.0
+github:              "toyhaskeller/playground/lens-over-tea"
+license:             BSD3
+author:              "Konstantin Saveljev"
+maintainer:          "toyhaskeller@gmail.com"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/lens-over-tea#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  lens-over-tea:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lens-over-tea
